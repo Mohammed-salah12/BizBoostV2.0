@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
+import "./index.css"; // If you have custom CSS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Hero from "./componnent/Hero";
+import Facts from "./componnent/Facts";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "animate.css";
+import "animate.css/animate.min.css";
+import About from "./componnent/About";
+import Features from "./componnent/Features";
+import Campaign from "./componnent/Campaign";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero />
+      <Facts />
+      <About />
+      <Features />
+      <Campaign />
     </div>
   );
 }

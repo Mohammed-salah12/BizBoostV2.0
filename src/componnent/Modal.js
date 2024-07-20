@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Ensure this is imported for Bootstrap functionality
+import "bootstrap-icons/font/bootstrap-icons.css"; // Ensure Bootstrap Icons is imported
 
 const Modal = ({ id, title, children, onClose }) => {
   return (

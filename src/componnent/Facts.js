@@ -3,6 +3,7 @@ import CountUp from "react-countup";
 import "font-awesome/css/font-awesome.min.css";
 import "../assets/facts.css"; // Assuming you have custom styles for the facts section
 import "animate.css/animate.min.css"; // Import animate.css
+import "bootstrap-icons/font/bootstrap-icons.css"; // Ensure Bootstrap Icons is imported
 
 const Facts = () => {
   return (

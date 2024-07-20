@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ContactUsVid from "../videos/contactus.mp4"; // Import video
 import BusinessContact from "../img/businessContact.jpg"; // Import background image
-
+import "../index.css";
 const Contact = () => {
   const [loading, setLoading] = useState(true);
 
@@ -45,12 +45,10 @@ const Contact = () => {
       {!loading && (
         <>
           {/* Navbar */}
-          <div className="container-fluid position-relative p-0">
-            <Navbar />
-
+          <div className="container-fluid position-relative p-0 bg-header">
             {/* Page Header */}
             <div
-              className="container-fluid py-5"
+              className="container-fluid py-5 bg-header"
               style={{
                 backgroundImage: `url(${BusinessContact})`,
                 backgroundSize: "cover",
@@ -240,8 +238,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          <Footer />
         </>
       )}
     </div>

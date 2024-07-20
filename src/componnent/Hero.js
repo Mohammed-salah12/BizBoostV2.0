@@ -56,7 +56,6 @@ const Hero = () => {
         </div>
       )}
       <div className="container-fluid position-relative p-0 bg-navbar">
-        <Navbar /> {/* Use the Navbar component */}
         <div
           id="header-carousel"
           className="carousel slide carousel-fade"

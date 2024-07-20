@@ -17,6 +17,8 @@ import VendorSlider from "./componnent/VendorSlider";
 import Footer from "./componnent/Footer";
 import Contact from "./componnent/Contact"; // Updated path
 import Navbar from "./componnent/Navbar"; // Updated path
+import CampaignPg from "./componnent/CampaignPg"; // Import the CampaignPg component
+import { AboutPg } from "./componnent/AboutPg";
 
 function App() {
   return (
@@ -35,13 +37,15 @@ function App() {
                 <Campaign />
                 <Testimonial />
                 <VendorSlider />
-                <Footer />
               </>
             }
           />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/campaign-pg" element={<CampaignPg />} />{" "}
+          <Route path="/About-pg" element={<AboutPg />} />{" "}
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

@@ -11,7 +11,7 @@ const Contact = () => {
     // Simulate a network request or delay
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Adjust the timeout duration as needed
+    }, 300); // Adjust the timeout duration as needed
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, []);

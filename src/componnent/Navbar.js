@@ -1,8 +1,13 @@
 // Navbar.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  // Function to determine if the link is active
+  const isActive = (path) => location.pathname === path;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
       <Link to="/" className="navbar-brand p-0">
@@ -21,29 +26,31 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav ms-auto py-0">
           <li className="nav-item">
-            <Link to="/" className="nav-link active">
+            <Link
+              to="/"
+              className={`nav-link ${isActive("/") ? "active" : ""}`}
+            >
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link">
+            <Link
+              to="/about"
+              className={`nav-link ${isActive("/about") ? "active" : ""}`}
+            >
               About Us
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/campaign" className="nav-link">
+            <Link
+              to="/campaign"
+              className={`nav-link ${isActive("/campaign") ? "active" : ""}`}
+            >
               Campaigns
             </Link>
           </li>
           <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <a className="nav-link " href="#" id="navbarDropdown" role="button">
               Volunteers
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -61,45 +68,19 @@ const Navbar = () => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link "
               href="#"
               id="navbarDropdown2"
               role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
             >
               Businesses
             </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown2">
-              <li>
-                <Link to="/price" className="dropdown-item">
-                  Pricing Plan
-                </Link>
-              </li>
-              <li>
-                <Link to="/features" className="dropdown-item">
-                  Our Features
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="dropdown-item">
-                  Team Members
-                </Link>
-              </li>
-              <li>
-                <Link to="/testimonial" className="dropdown-item">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link to="/quote" className="dropdown-item">
-                  Free Quote
-                </Link>
-              </li>
-            </ul>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link">
+            <Link
+              to="/contact"
+              className={`nav-link ${isActive("/contact") ? "active" : ""}`}
+            >
               Contact
             </Link>
           </li>

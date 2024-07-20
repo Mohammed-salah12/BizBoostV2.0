@@ -12,6 +12,9 @@ import "animate.css/animate.min.css";
 import About from "./componnent/About";
 import Features from "./componnent/Features";
 import Campaign from "./componnent/Campaign";
+import Testimonial from "./componnent/Testimonials";
+import VendorSlider from "./componnent/VendorSlider";
+import Footer from "./componnent/Footer";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
       <About />
       <Features />
       <Campaign />
+      <Testimonial />
+      <VendorSlider />
+      <Footer />
     </div>
   );
 }

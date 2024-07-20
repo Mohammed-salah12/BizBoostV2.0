@@ -16,7 +16,7 @@ const Features = () => {
         >
           <h5 className="fw-bold text-primary text-uppercase">Why Choose Us</h5>
           <h1 className="mb-0">
-            We Are Here to Grow Your Business Exponentially
+            We Are Here to BOOOST Your Business Exponentially
           </h1>
         </div>
         <div className="row g-5">

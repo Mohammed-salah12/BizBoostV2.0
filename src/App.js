@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./index.css";
@@ -26,9 +31,10 @@ import SignInOut from "./componnent/SignInOut";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/BizBoostV2.0">
+      {" "}
+      {/* Update basename to match your repository name */}
       <Navbar />
-
       <div className="App">
         <Routes>
           <Route
@@ -50,8 +56,9 @@ function App() {
           <Route path="/campaign-pg" element={<CampaignPg />} />
           <Route path="/about-pg" element={<AboutPg />} />
           <Route path="/SignInOut" element={<SignInOut />} />
+          <Route path="*" element={<Navigate to="/" />} />{" "}
+          {/* Redirect unknown routes */}
         </Routes>
-        {/* <VendorSlider /> */}
         <VendorSlider />
         <Footer />
       </div>

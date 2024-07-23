@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../assets/campaignDetails.css";
 import BusinessContact from "../img/businessContact.jpg";
 import CompanyLogo from "../img/Funder.jpeg";
-import VendorSlider from "./VendorSlider";
 
 const CampaignDetails = () => {
   const [loading, setLoading] = useState(true);
@@ -162,7 +161,7 @@ const CampaignDetails = () => {
                       </div>
                       <div className="d-flex mb-4">
                         <img
-                          src="img/user.jpg"
+                          src={CompanyLogo}
                           className="img-fluid rounded"
                           style={{ width: "45px", height: "45px" }}
                           alt="User"
@@ -184,7 +183,7 @@ const CampaignDetails = () => {
                       </div>
                       <div className="d-flex mb-4">
                         <img
-                          src="img/user.jpg"
+                          src={CompanyLogo}
                           className="img-fluid rounded"
                           style={{ width: "45px", height: "45px" }}
                           alt="User"
@@ -206,7 +205,7 @@ const CampaignDetails = () => {
                       </div>
                       <div className="d-flex mb-4">
                         <img
-                          src="img/user.jpg"
+                          src={CompanyLogo}
                           className="img-fluid rounded"
                           style={{ width: "45px", height: "45px" }}
                           alt="User"

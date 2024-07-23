@@ -266,8 +266,6 @@ const CampaignPg = () => {
           </div>
         </div>
       </div>
-
-      <VendorSlider />
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "font-awesome/css/font-awesome.min.css";
 import "animate.css";
+import { useNavigate } from "react-router-dom";
+
 import {
   FaUser,
   FaCalendarAlt,
@@ -13,6 +15,11 @@ import CampaignImg2 from "../img/blog-2.jpg";
 import CampaignImg3 from "../img/blog-3.jpg";
 
 const Campaign = () => {
+  const navigate = useNavigate();
+
+  const handleCampaignClick = () => {
+    navigate("/campaignDetails");
+  };
   return (
     <div
       className="container-fluid py-5 animate__animated animate__fadeInUp"
@@ -46,7 +53,7 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <FaUser className="text-primary me-2" /> John Doe
+                    <FaUser className="text-primary me-2" /> Company Name
                   </small>
                   <small>
                     <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
@@ -58,7 +65,10 @@ const Campaign = () => {
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
                 <div className="mt-3">
-                  <button className="btn btn-primary me-2">
+                  <button
+                    className="btn btn-primary me-2"
+                    onClick={handleCampaignClick}
+                  >
                     <FaBullhorn /> Campaign
                   </button>
                   <button className="btn btn-success">
@@ -86,7 +96,7 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <FaUser className="text-primary me-2" /> John Doe
+                    <FaUser className="text-primary me-2" /> Company Name
                   </small>
                   <small>
                     <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
@@ -98,7 +108,10 @@ const Campaign = () => {
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
                 <div className="mt-3">
-                  <button className="btn btn-primary me-2">
+                  <button
+                    className="btn btn-primary me-2"
+                    onClick={handleCampaignClick}
+                  >
                     <FaBullhorn /> Campaign
                   </button>
                   <button className="btn btn-success">
@@ -125,7 +138,7 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <FaUser className="text-primary me-2" /> John Doe
+                    <FaUser className="text-primary me-2" /> Company Name
                   </small>
                   <small>
                     <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
@@ -137,7 +150,10 @@ const Campaign = () => {
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
                 <div className="mt-3">
-                  <button className="btn btn-primary me-2">
+                  <button
+                    className="btn btn-primary me-2"
+                    onClick={handleCampaignClick}
+                  >
                     <FaBullhorn /> Campaign
                   </button>
                   <button className="btn btn-success">

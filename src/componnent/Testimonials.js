@@ -56,7 +56,7 @@ const Testimonials = () => {
                 style={{ width: "60px", height: "60px" }}
               />
               <div className="ps-4">
-                <h4 className="text-primary mb-1">Client Name</h4>
+                <h4 className="text-primary mb-1">Company Name</h4>
                 <small className="text-uppercase">Profession</small>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Testimonials = () => {
                 style={{ width: "60px", height: "60px" }}
               />
               <div className="ps-4">
-                <h4 className="text-primary mb-1">Client Name</h4>
+                <h4 className="text-primary mb-1">Investor Name</h4>
                 <small className="text-uppercase">Profession</small>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Testimonials = () => {
                 style={{ width: "60px", height: "60px" }}
               />
               <div className="ps-4">
-                <h4 className="text-primary mb-1">Client Name</h4>
+                <h4 className="text-primary mb-1">Volunteer Name</h4>
                 <small className="text-uppercase">Profession</small>
               </div>
             </div>

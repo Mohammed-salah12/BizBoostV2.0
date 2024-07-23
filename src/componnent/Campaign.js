@@ -2,6 +2,12 @@ import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "font-awesome/css/font-awesome.min.css";
 import "animate.css";
+import {
+  FaUser,
+  FaCalendarAlt,
+  FaBullhorn,
+  FaHandsHelping,
+} from "react-icons/fa";
 import CampaignImg1 from "../img/blog-1.jpg";
 import CampaignImg2 from "../img/blog-2.jpg";
 import CampaignImg3 from "../img/blog-3.jpg";
@@ -40,11 +46,10 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <i className="fa fa-user text-primary me-2"></i>John Doe
+                    <FaUser className="text-primary me-2" /> John Doe
                   </small>
                   <small>
-                    <i className="fa fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045
+                    <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
                   </small>
                 </div>
                 <h4 className="mb-3">StartUp Category</h4>
@@ -52,6 +57,15 @@ const Campaign = () => {
                 <a className="text-uppercase" href="#">
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
+                <div className="mt-3">
+                  <button className="btn btn-primary me-2">
+                    <FaBullhorn /> Campaign
+                  </button>
+                  <button className="btn btn-success">
+                    <FaHandsHelping />
+                    Be Volunteers
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -72,11 +86,10 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <i className="fa fa-user text-primary me-2"></i>John Doe
+                    <FaUser className="text-primary me-2" /> John Doe
                   </small>
                   <small>
-                    <i className="fa fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045
+                    <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
                   </small>
                 </div>
                 <h4 className="mb-3">StartUp Category</h4>
@@ -84,6 +97,14 @@ const Campaign = () => {
                 <a className="text-uppercase" href="#">
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
+                <div className="mt-3">
+                  <button className="btn btn-primary me-2">
+                    <FaBullhorn /> Campaign
+                  </button>
+                  <button className="btn btn-success">
+                    <FaHandsHelping /> Be Volunteers
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -104,11 +125,10 @@ const Campaign = () => {
               <div className="p-4">
                 <div className="d-flex mb-3">
                   <small className="me-3">
-                    <i className="fa fa-user text-primary me-2"></i>John Doe
+                    <FaUser className="text-primary me-2" /> John Doe
                   </small>
                   <small>
-                    <i className="fa fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045
+                    <FaCalendarAlt className="text-primary me-2" /> 01 Jan, 2045
                   </small>
                 </div>
                 <h4 className="mb-3">StartUp Category</h4>
@@ -116,6 +136,14 @@ const Campaign = () => {
                 <a className="text-uppercase" href="#">
                   Read More <i className="bi bi-arrow-right"></i>
                 </a>
+                <div className="mt-3">
+                  <button className="btn btn-primary me-2">
+                    <FaBullhorn /> Campaign
+                  </button>
+                  <button className="btn btn-success">
+                    <FaHandsHelping /> Be Volunteers
+                  </button>
+                </div>
               </div>
             </div>
           </div>

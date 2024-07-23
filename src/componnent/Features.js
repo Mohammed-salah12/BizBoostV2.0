@@ -1,6 +1,6 @@
 import React from "react";
-import "font-awesome/css/font-awesome.min.css"; // Ensure FontAwesome is imported
 import FeatureImg from "../img/feature.jpg"; // Update the path to your image file
+import { FaCubes, FaAward, FaUsersCog, FaPhoneAlt } from "react-icons/fa"; // Import the necessary icons
 import "bootstrap-icons/font/bootstrap-icons.css"; // Ensure Bootstrap Icons is imported
 
 const Features = () => {
@@ -30,7 +30,7 @@ const Features = () => {
                   className="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                   style={{ width: "60px", height: "60px" }}
                 >
-                  <i className="fa fa-cubes text-white"></i>
+                  <FaCubes className="text-white" size={30} />
                 </div>
                 <h4>Free platform</h4>
                 <p className="mb-0">
@@ -45,7 +45,7 @@ const Features = () => {
                   className="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                   style={{ width: "60px", height: "60px" }}
                 >
-                  <i className="fa fa-award text-white"></i>
+                  <FaAward className="text-white" size={30} />
                 </div>
                 <h4>Make Your Own Campaign</h4>
                 <p className="mb-0">
@@ -77,12 +77,12 @@ const Features = () => {
                   className="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                   style={{ width: "60px", height: "60px" }}
                 >
-                  <i className="fa fa-users-cog text-white"></i>
+                  <FaUsersCog className="text-white" size={30} />
                 </div>
                 <h4>Find Volunteers</h4>
                 <p className="mb-0">
-                  Find Volunteers that suits your needs , webDevelopers ,
-                  Marketers , UI/UX designers
+                  Find Volunteers that suits your needs, web developers,
+                  marketers, UI/UX designers
                 </p>
               </div>
               <div
@@ -93,9 +93,9 @@ const Features = () => {
                   className="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                   style={{ width: "60px", height: "60px" }}
                 >
-                  <i className="fa fa-phone-alt text-white"></i>
+                  <FaPhoneAlt className="text-white" size={30} />
                 </div>
-                <h4>Find Investors , Mentors, .. ETC</h4>
+                <h4>Find Investors, Mentors, .. ETC</h4>
                 <p className="mb-0">
                   BizBoost is not just a connector. We are a platform where you
                   will find everyone you need—investors, mentors, volunteers,

@@ -1,9 +1,8 @@
 import React from "react";
 import CountUp from "react-countup";
-import "font-awesome/css/font-awesome.min.css";
 import "../assets/facts.css"; // Assuming you have custom styles for the facts section
 import "animate.css/animate.min.css"; // Import animate.css
-import "bootstrap-icons/font/bootstrap-icons.css"; // Ensure Bootstrap Icons is imported
+import { FaUsers, FaCheck, FaAward } from "react-icons/fa"; // Import the necessary icons
 
 const Facts = () => {
   return (
@@ -22,7 +21,7 @@ const Facts = () => {
                 className="bg-white d-flex align-items-center justify-content-center rounded mb-2"
                 style={{ width: "60px", height: "60px" }}
               >
-                <i className="fa fa-users text-primary"></i>
+                <FaUsers className="text-primary" size={30} />
               </div>
               <div className="ps-4">
                 <h5 className="text-white mb-0">Happy Clients</h5>
@@ -44,7 +43,7 @@ const Facts = () => {
                 className="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
                 style={{ width: "60px", height: "60px" }}
               >
-                <i className="fa fa-check text-white"></i>
+                <FaCheck className="text-white" size={30} />
               </div>
               <div className="ps-4">
                 <h5 className="text-primary mb-0">Projects Done</h5>
@@ -66,7 +65,7 @@ const Facts = () => {
                 className="bg-white d-flex align-items-center justify-content-center rounded mb-2"
                 style={{ width: "60px", height: "60px" }}
               >
-                <i className="fa fa-award text-primary"></i>
+                <FaAward className="text-primary" size={30} />
               </div>
               <div className="ps-4">
                 <h5 className="text-white mb-0">Win Awards</h5>

@@ -1,6 +1,6 @@
 import React from "react";
-import "font-awesome/css/font-awesome.min.css"; // Ensure FontAwesome is imported
 import BusinessVideo from "../videos/bussiness.mp4"; // Update the path to your video file
+import { FaCheck, FaPhone } from "react-icons/fa"; // Import the necessary icons
 import "bootstrap-icons/font/bootstrap-icons.css"; // Ensure Bootstrap Icons is imported
 
 const About = () => {
@@ -30,11 +30,11 @@ const About = () => {
                 style={{ animationDelay: "0.2s" }}
               >
                 <h5 className="mb-3">
-                  <i className="fa fa-check text-primary me-3"></i>Fundraising
+                  <FaCheck className="text-primary me-3" /> Fundraising
                   Campaigns
                 </h5>
                 <h5 className="mb-3">
-                  <i className="fa fa-check text-primary me-3"></i>Volunteers
+                  <FaCheck className="text-primary me-3" /> Volunteers
                 </h5>
               </div>
               <div
@@ -42,10 +42,10 @@ const About = () => {
                 style={{ animationDelay: "0.4s" }}
               >
                 <h5 className="mb-3">
-                  <i className="fa fa-check text-primary me-3"></i> Investors
+                  <FaCheck className="text-primary me-3" /> Investors
                 </h5>
                 <h5 className="mb-3">
-                  <i className="fa fa-check text-primary me-3"></i>Mentors
+                  <FaCheck className="text-primary me-3" /> Mentors
                 </h5>
               </div>
             </div>
@@ -57,7 +57,7 @@ const About = () => {
                 className="bg-primary d-flex align-items-center justify-content-center rounded"
                 style={{ width: "60px", height: "60px" }}
               >
-                <i className="fa-solid fa-phone text-white"></i>
+                <FaPhone className="text-white" size={30} />
               </div>
               <div className="ps-4">
                 <h5 className="mb-2">Call to ask any question</h5>

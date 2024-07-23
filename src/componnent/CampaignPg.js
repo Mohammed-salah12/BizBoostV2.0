@@ -6,6 +6,10 @@ import Footer from "./Footer"; // Import the Footer component
 import Navbar from "./Navbar"; // Import the Navbar component
 import CampaignPic from "../img/blog-1.jpg"; // Import the Campaign image
 import funds from "../videos/funds.mp4"; // Import the video
+import { MdVolunteerActivism } from "react-icons/md"; // Import the volunteer icon from react-icons
+import { AiOutlineTag } from "react-icons/ai"; // Import the tag icon from react-icons
+import { FaUser, FaCalendarAlt } from "react-icons/fa"; // Import user and calendar icons from react-icons
+import { BiArrowToRight } from "react-icons/bi"; // Import the alternative arrow icon
 import "animate.css/animate.min.css";
 
 const CampaignPg = () => {
@@ -20,6 +24,7 @@ const CampaignPg = () => {
     // Clean up timeout on component unmount
     return () => clearTimeout(timer);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
@@ -33,6 +38,7 @@ const CampaignPg = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div>
       {/* Spinner Start */}
@@ -77,7 +83,9 @@ const CampaignPg = () => {
         >
           <div className="row py-5">
             <div className="col-12 pt-lg-5 mt-lg-5 text-center text-white">
-              <h1 className="display-4 animated zoomIn">Campaigns</h1>
+              <h1 className="display-4 animate__animated animate__zoomIn">
+                Campaigns
+              </h1>
               <a href="#" className="h5 text-white">
                 Home
               </a>
@@ -99,8 +107,10 @@ const CampaignPg = () => {
               <div className="row g-5">
                 {[...Array(8).keys()].map((_, index) => (
                   <div
-                    className="col-md-6 wow slideInUp"
-                    data-wow-delay={`${index % 2 === 0 ? "0.1s" : "0.6s"}`}
+                    className="col-md-6 animate__animated animate__slideInUp"
+                    style={{
+                      animationDelay: `${index % 2 === 0 ? "0.1s" : "0.6s"}`,
+                    }}
                     key={index}
                   >
                     <div className="blog-item bg-light rounded overflow-hidden">
@@ -108,7 +118,7 @@ const CampaignPg = () => {
                         <img className="img-fluid" src={CampaignPic} alt="" />
                         <a
                           className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                          href=""
+                          href="#"
                         >
                           Web Design
                         </a>
@@ -116,11 +126,11 @@ const CampaignPg = () => {
                       <div className="p-4">
                         <div className="d-flex mb-3">
                           <small className="me-3">
-                            <i className="far fa-user text-primary me-2"></i>
+                            <FaUser className="text-primary me-2" />
                             John Doe
                           </small>
                           <small>
-                            <i className="far fa-calendar-alt text-primary me-2"></i>
+                            <FaCalendarAlt className="text-primary me-2" />
                             01 Jan, 2045
                           </small>
                         </div>
@@ -129,54 +139,42 @@ const CampaignPg = () => {
                           Dolor et eos labore stet justo sed est sed sed sed
                           dolor stet amet
                         </p>
-                        <a className="text-uppercase" href="">
-                          Read More <i className="bi bi-arrow-right"></i>
+                        <a className="text-uppercase" href="#">
+                          Read More <BiArrowToRight />
                         </a>
                       </div>
+
+                      {/* Buttons Start */}
+                      <div className="p-4 d-flex justify-content-between">
+                        <a
+                          href="#campaign"
+                          className="btn btn-primary d-flex align-items-center py-2 px-4"
+                          style={{
+                            fontSize: "14px",
+                            backgroundColor: "#007bff",
+                            border: "none",
+                          }}
+                        >
+                          <FaCalendarAlt className="me-2" />
+                          Campaign
+                        </a>
+                        <a
+                          href="#volunteer"
+                          className="btn btn-success d-flex align-items-center py-2 px-4"
+                          style={{
+                            fontSize: "14px",
+                            backgroundColor: "#28a745",
+                            border: "none",
+                          }}
+                        >
+                          <MdVolunteerActivism className="me-2" />
+                          Be A Volunteer
+                        </a>
+                      </div>
+                      {/* Buttons End */}
                     </div>
                   </div>
                 ))}
-                {/* Pagination Start */}
-                <div className="col-12 wow slideInUp" data-wow-delay="0.1s">
-                  <nav aria-label="Page navigation">
-                    <ul className="pagination pagination-lg m-0">
-                      <li className="page-item disabled">
-                        <a
-                          className="page-link rounded-0"
-                          href="#"
-                          aria-label="Previous"
-                        >
-                          <span aria-hidden="true">
-                            <i className="bi bi-arrow-left"></i>
-                          </span>
-                        </a>
-                      </li>
-                      <li className="page-item active">
-                        <a className="page-link" href="#">
-                          1
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          2
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          3
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">
-                            <i className="bi bi-arrow-right"></i>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                {/* Pagination End */}
               </div>
             </div>
             {/* Blog List End */}
@@ -184,7 +182,10 @@ const CampaignPg = () => {
             {/* Sidebar Start */}
             <div className="col-lg-4">
               {/* Search Form Start */}
-              <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
+              <div
+                className="mb-5 animate__animated animate__slideInUp"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <div className="input-group">
                   <input
                     type="text"
@@ -192,140 +193,80 @@ const CampaignPg = () => {
                     placeholder="Keyword"
                   />
                   <button className="btn btn-primary px-4">
-                    <i className="bi bi-search"></i>
+                    <BiArrowToRight />
                   </button>
                 </div>
               </div>
               {/* Search Form End */}
 
               {/* Category Start */}
-              <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
+              <div
+                className="mb-5 animate__animated animate__slideInUp"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <div className="section-title section-title-sm position-relative pb-3 mb-4">
                   <h3 className="mb-0">Categories</h3>
                 </div>
-                <div className="link-animated d-flex flex-column justify-content-start">
+                <div className="link-animated">
                   <a
-                    className="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
                     href="#"
+                    className="d-flex justify-content-between align-items-center py-2"
                   >
-                    <i className="bi bi-arrow-right me-2"></i>Web Design
+                    <span>Web Design</span>
+                    <span className="text-primary">50</span>
                   </a>
                   <a
-                    className="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
                     href="#"
+                    className="d-flex justify-content-between align-items-center py-2"
                   >
-                    <i className="bi bi-arrow-right me-2"></i>Web Development
+                    <span>Web Development</span>
+                    <span className="text-primary">35</span>
                   </a>
                   <a
-                    className="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
                     href="#"
+                    className="d-flex justify-content-between align-items-center py-2"
                   >
-                    <i className="bi bi-arrow-right me-2"></i>Keyword Research
-                  </a>
-                  <a
-                    className="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
-                    href="#"
-                  >
-                    <i className="bi bi-arrow-right me-2"></i>Email Marketing
+                    <span>Graphic Design</span>
+                    <span className="text-primary">20</span>
                   </a>
                 </div>
               </div>
               {/* Category End */}
 
-              {/* Recent Post Start */}
-              <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
+              {/* Tags Start */}
+              <div
+                className="animate__animated animate__slideInUp"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <div className="section-title section-title-sm position-relative pb-3 mb-4">
-                  <h3 className="mb-0">Recent Post</h3>
+                  <h3 className="mb-0">Tags</h3>
                 </div>
-                <div className="d-flex rounded overflow-hidden mb-3">
-                  <img
-                    className="img-fluid"
-                    src={CampaignPic}
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      objectFit: "cover",
-                    }}
-                    alt=""
-                  />
-                  <a
-                    href=""
-                    className="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                  >
-                    Lorem ipsum dolor sit amet adipis elit
-                  </a>
-                </div>
-                <div className="d-flex rounded overflow-hidden mb-3">
-                  <img
-                    className="img-fluid"
-                    src={CampaignPic}
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      objectFit: "cover",
-                    }}
-                    alt=""
-                  />
-                  <a
-                    href=""
-                    className="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                  >
-                    Lorem ipsum dolor sit amet adipis elit
-                  </a>
-                </div>
-                <div className="d-flex rounded overflow-hidden mb-3">
-                  <img
-                    className="img-fluid"
-                    src={CampaignPic}
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                      objectFit: "cover",
-                    }}
-                    alt=""
-                  />
-                  <a
-                    href=""
-                    className="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                  >
-                    Lorem ipsum dolor sit amet adipis elit
-                  </a>
-                </div>
-              </div>
-              {/* Recent Post End */}
-
-              {/* Tag Cloud Start */}
-              <div className="wow slideInUp" data-wow-delay="0.1s">
-                <div className="section-title section-title-sm position-relative pb-3 mb-4">
-                  <h3 className="mb-0">Tag Cloud</h3>
-                </div>
-                <div className="d-flex flex-wrap m-n1">
-                  <a href="#" className="btn btn-light m-1">
+                <div className="d-flex flex-wrap">
+                  <a href="#" className="btn btn-light btn-sm m-1">
+                    <AiOutlineTag className="me-2" />
                     Design
                   </a>
-                  <a href="#" className="btn btn-light m-1">
+                  <a href="#" className="btn btn-light btn-sm m-1">
+                    <AiOutlineTag className="me-2" />
                     Development
                   </a>
-                  <a href="#" className="btn btn-light m-1">
+                  <a href="#" className="btn btn-light btn-sm m-1">
+                    <AiOutlineTag className="me-2" />
                     Marketing
                   </a>
-                  <a href="#" className="btn btn-light m-1">
+                  <a href="#" className="btn btn-light btn-sm m-1">
+                    <AiOutlineTag className="me-2" />
                     SEO
-                  </a>
-                  <a href="#" className="btn btn-light m-1">
-                    Branding
-                  </a>
-                  <a href="#" className="btn btn-light m-1">
-                    Research
                   </a>
                 </div>
               </div>
-              {/* Tag Cloud End */}
+              {/* Tags End */}
             </div>
             {/* Sidebar End */}
           </div>
         </div>
       </div>
+
       <VendorSlider />
     </div>
   );

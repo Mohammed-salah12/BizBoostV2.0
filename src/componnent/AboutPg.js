@@ -1,46 +1,11 @@
 import React, { useEffect } from "react";
 import About from "./About";
-import team1 from "../img/team-1.jpg";
-import team2 from "../img/team-2.jpg";
-import team3 from "../img/team-3.jpg";
 import VendorSlider from "./VendorSlider";
 import AboutVid from "../videos/about.mp4";
+import Team from "./Team";
 import "animate.css/animate.min.css";
 
 export const AboutPg = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      imgSrc: team1,
-      name: "Full Name",
-      designation: "Designation",
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-    {
-      id: 2,
-      imgSrc: team2,
-      name: "Full Name",
-      designation: "Designation",
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-    {
-      id: 3,
-      imgSrc: team3,
-      name: "Full Name",
-      designation: "Designation",
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
@@ -87,71 +52,9 @@ export const AboutPg = () => {
       <div className="about-section">
         <About />
       </div>
-      <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div className="container py-5">
-          <div
-            className="section-title text-center position-relative pb-3 mb-5 mx-auto"
-            style={{ maxWidth: "600px" }}
-          >
-            <h5 className="fw-bold text-primary text-uppercase">
-              Team Members
-            </h5>
-            <h1 className="mb-0">
-              Professional Stuffs Ready to Help Your Business
-            </h1>
-          </div>
-          <div className="row g-5">
-            {teamMembers.map((member, index) => (
-              <div
-                key={member.id}
-                className="col-lg-4 wow slideInUp"
-                data-wow-delay={`${0.3 + 0.3 * index}s`}
-              >
-                <div className="team-item bg-light rounded overflow-hidden">
-                  <div className="team-img position-relative overflow-hidden">
-                    <img
-                      className="img-fluid w-100"
-                      src={member.imgSrc}
-                      alt={`Team Member ${member.id}`}
-                    />
-                    <div className="team-social">
-                      <a
-                        className="btn btn-lg btn-primary btn-lg-square rounded"
-                        href={member.twitter}
-                      >
-                        <i className="fab fa-twitter fw-normal"></i>
-                      </a>
-                      <a
-                        className="btn btn-lg btn-primary btn-lg-square rounded"
-                        href={member.facebook}
-                      >
-                        <i className="fab fa-facebook-f fw-normal"></i>
-                      </a>
-                      <a
-                        className="btn btn-lg btn-primary btn-lg-square rounded"
-                        href={member.instagram}
-                      >
-                        <i className="fab fa-instagram fw-normal"></i>
-                      </a>
-                      <a
-                        className="btn btn-lg btn-primary btn-lg-square rounded"
-                        href={member.linkedin}
-                      >
-                        <i className="fab fa-linkedin-in fw-normal"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="text-center py-4">
-                    <h4 className="text-primary">{member.name}</h4>
-                    <p className="text-uppercase m-0">{member.designation}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <VendorSlider />
+      <Team />
     </div>
   );
 };
+
+export default AboutPg;

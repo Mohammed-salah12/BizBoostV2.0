@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Modal from "./Modal";
+import "../assets/hero.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Navbar = () => {
   const location = useLocation();
@@ -8,12 +11,27 @@ const Navbar = () => {
   // Function to determine if the link is active
   const isActive = (path) => location.pathname === path;
 
+  // Check if the current path is '/userProfile' or '/campaignDetails'
+  const isUserProfile = isActive("/userProfile");
+  const isCampaignDetails = isActive("/campaignDetails");
+  const isSignIn = isActive("/signin");
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-        <Link to="/" className="navbar-brand p-0">
-          <h1 className="m-0">
-            <i className="fa fa-user-tie me-2"></i>BizBoost
+      <nav
+        className={`navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 ${
+          isUserProfile ? "user-profile-navbar" : ""
+        } ${isSignIn ? "signin-navbar" : ""}`}
+      >
+        <Link
+          to="/"
+          className={`navbar-brand p-0 ${
+            isCampaignDetails ? "campaign-details-logo" : ""
+          }`}
+        >
+          <h1 className={` ${isSignIn ? "ddd" : ""}`}>
+            <i className={`fa fa-user-tie me-2`}></i>
+            BizBoost
           </h1>
         </Link>
         <button
@@ -29,7 +47,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 to="/"
-                className={`nav-link ${isActive("/") ? "active" : ""}`}
+                className={`nav-link ${isActive("/") ? "active" : ""} ${
+                  isCampaignDetails ? "black-link" : ""
+                }`}
               >
                 Home
               </Link>
@@ -37,7 +57,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 to="/about-pg"
-                className={`nav-link ${isActive("/about") ? "active" : ""}`}
+                className={`nav-link ${isActive("/about-pg") ? "active" : ""} ${
+                  isCampaignDetails ? "black-link" : ""
+                }`}
               >
                 About Us
               </Link>
@@ -47,14 +69,14 @@ const Navbar = () => {
                 to="/campaign-pg"
                 className={`nav-link ${
                   isActive("/campaign-pg") ? "active" : ""
-                }`}
+                } ${isCampaignDetails ? "black-link" : ""}`}
               >
                 Campaigns
               </Link>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link"
+                className={`nav-link ${isCampaignDetails ? "black-link" : ""}`}
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -76,7 +98,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link"
+                className={`nav-link ${isCampaignDetails ? "black-link" : ""}`}
                 href="#"
                 id="navbarDropdown2"
                 role="button"
@@ -87,9 +109,22 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 to="/contact"
-                className={`nav-link ${isActive("/contact") ? "active" : ""}`}
+                className={`nav-link ${isActive("/contact") ? "active" : ""} ${
+                  isCampaignDetails ? "black-link" : ""
+                }`}
               >
                 Contact
+              </Link>
+            </li>
+            <li className="nav-item"></li>
+            <li className="nav-item">
+              <Link
+                to="/signin"
+                className={`nav-link ${isActive("/signin") ? "active" : ""} ${
+                  isCampaignDetails ? "black-link" : ""
+                }`}
+              >
+                Sign In
               </Link>
             </li>
           </ul>

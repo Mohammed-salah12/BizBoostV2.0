@@ -7,7 +7,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "animate.css";
-import Hero from "./componnent/Hero"; // Updated path
+import "./assets/hero.css";
+import Hero from "./componnent/Hero";
 import Facts from "./componnent/Facts";
 import About from "./componnent/About";
 import Features from "./componnent/Features";
@@ -15,16 +16,20 @@ import Campaign from "./componnent/Campaign";
 import Testimonial from "./componnent/Testimonials";
 import VendorSlider from "./componnent/VendorSlider";
 import Footer from "./componnent/Footer";
-import Contact from "./componnent/Contact"; // Updated path
-import Navbar from "./componnent/Navbar"; // Updated path
-import CampaignPg from "./componnent/CampaignPg"; // Import the CampaignPg component
-import { AboutPg } from "./componnent/AboutPg";
+import Contact from "./componnent/Contact";
+import Navbar from "./componnent/Navbar";
+import CampaignPg from "./componnent/CampaignPg";
+import AboutPg from "./componnent/AboutPg";
+import CampaignDetails from "./componnent/CampaignDetails";
+import Team from "./componnent/Team";
+import SignInOut from "./componnent/SignInOut";
 
 function App() {
   return (
     <Router>
+      <Navbar />
+
       <div className="App">
-        <Navbar /> {/* Add Navbar here */}
         <Routes>
           <Route
             path="/"
@@ -36,16 +41,20 @@ function App() {
                 <Features />
                 <Campaign />
                 <Testimonial />
-                <VendorSlider />
+                <Team />
               </>
             }
           />
+          <Route path="/CampaignDetails" element={<CampaignDetails />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/campaign-pg" element={<CampaignPg />} />{" "}
-          <Route path="/About-pg" element={<AboutPg />} />{" "}
+          <Route path="/campaign-pg" element={<CampaignPg />} />
+          <Route path="/about-pg" element={<AboutPg />} />
+          <Route path="/SignInOut" element={<SignInOut />} />
         </Routes>
+        {/* <VendorSlider /> */}
+        <VendorSlider />
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }

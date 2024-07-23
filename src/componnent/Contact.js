@@ -3,7 +3,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ContactUsVid from "../videos/contactus.mp4"; // Import video
 import BusinessContact from "../img/businessContact.jpg"; // Import background image
+import { FaPhoneAlt, FaEnvelopeOpen, FaMapMarkerAlt } from "react-icons/fa";
 import "../index.css";
+
 const Contact = () => {
   const [loading, setLoading] = useState(true);
 
@@ -15,6 +17,7 @@ const Contact = () => {
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
@@ -134,7 +137,7 @@ const Contact = () => {
                       className="bg-primary d-flex align-items-center justify-content-center rounded"
                       style={{ width: "60px", height: "60px" }}
                     >
-                      <i className="fa fa-phone-alt text-white"></i>
+                      <FaPhoneAlt className="text-white" size="24" />
                     </div>
                     <div className="ps-4">
                       <h5 className="mb-2">Call to ask any question</h5>
@@ -151,7 +154,7 @@ const Contact = () => {
                       className="bg-primary d-flex align-items-center justify-content-center rounded"
                       style={{ width: "60px", height: "60px" }}
                     >
-                      <i className="fa fa-envelope-open text-white"></i>
+                      <FaEnvelopeOpen className="text-white" size="24" />
                     </div>
                     <div className="ps-4">
                       <h5 className="mb-2">Email</h5>
@@ -168,7 +171,7 @@ const Contact = () => {
                       className="bg-primary d-flex align-items-center justify-content-center rounded"
                       style={{ width: "60px", height: "60px" }}
                     >
-                      <i className="fa fa-map-marker-alt text-white"></i>
+                      <FaMapMarkerAlt className="text-white" size="24" />
                     </div>
                     <div className="ps-4">
                       <h5 className="mb-2">Visit our office</h5>

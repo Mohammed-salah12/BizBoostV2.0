@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar"; // Import the Navbar component
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "font-awesome/css/font-awesome.min.css";
 import "animate.css/animate.min.css";
 import "../assets/hero.css";
+import "../index.css";
 import CarasoleImg1 from "../img/carousel-1.jpg";
+import { FaAward } from "react-icons/fa";
 import CarasoleImg2 from "../img/carousel-2.jpg";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"; // Import specific icons
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
@@ -127,10 +129,10 @@ const Hero = () => {
             data-bs-target="#header-carousel"
             data-bs-slide="prev"
           >
-            <span
+            <FaArrowLeft
               className="carousel-control-prev-icon"
               aria-hidden="true"
-            ></span>
+            />
             <span className="visually-hidden">Previous</span>
           </button>
           <button
@@ -139,10 +141,10 @@ const Hero = () => {
             data-bs-target="#header-carousel"
             data-bs-slide="next"
           >
-            <span
+            <FaArrowRight
               className="carousel-control-next-icon"
               aria-hidden="true"
-            ></span>
+            />
             <span className="visually-hidden">Next</span>
           </button>
         </div>
